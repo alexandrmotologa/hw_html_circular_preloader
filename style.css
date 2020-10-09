@@ -1,0 +1,35 @@
+body{
+    background-color: #333;
+
+}
+
+.big{
+    animation:firstCircle 1.2s infinite linear;
+    height: 70px;
+    width: 70px;
+    border: 10px transparent solid;
+    border-radius: 50%;
+    border-top-color: red;
+    border-bottom-color: red;
+}
+
+.small{
+    animation:secondCircle 1s infinite linear;
+    height: 40px;
+    width: 40px;
+    border: 10px transparent solid;
+    border-radius: 50%;
+    margin: 5px;
+    border-right-color:#09f;
+    border-left-color:#09f;
+    
+}
+
+@keyframes firstCircle {
+    0% {transform: rotate(0deg); opacity: 0.5;}
+	50% {transform: rotate(180deg); opacity: 1;}
+    100% {transform: rotate(0deg); opacity: 0.5;}
+}
+@keyframes secondCircle {
+    100% {transform: rotate(360deg);}
+}
