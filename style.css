@@ -1,20 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
 body{
     background-color: #333;
-
 }
 
-.big{
-    animation:firstCircle 1.2s infinite linear;
+#preloader{
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 
+    -50%);
+}
+
+div#preloader>.big{
+    animation: firstCircle 1.1s infinite linear;
     height: 70px;
     width: 70px;
     border: 10px transparent solid;
     border-radius: 50%;
     border-top-color: red;
     border-bottom-color: red;
+    position: absolute;
 }
 
-.small{
-    animation:secondCircle 1s infinite linear;
+div#preloader>.small{
+    animation: secondCircle 0.9s infinite linear;
     height: 40px;
     width: 40px;
     border: 10px transparent solid;
@@ -22,7 +38,9 @@ body{
     margin: 5px;
     border-right-color:#09f;
     border-left-color:#09f;
-    
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 @keyframes firstCircle {
@@ -30,6 +48,7 @@ body{
 	50% {transform: rotate(180deg); opacity: 1;}
     100% {transform: rotate(0deg); opacity: 0.5;}
 }
+
 @keyframes secondCircle {
     100% {transform: rotate(360deg);}
 }
